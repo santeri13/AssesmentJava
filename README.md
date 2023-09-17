@@ -1,18 +1,17 @@
 ## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Here is code for Java task assesment
 
 ## Folder Structure
-
-The workspace contains two folders by default, where:
 
 - `src`: the folder to maintain sources
 - `lib`: the folder to maintain dependencies
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+In src could be found folder:
+- `dao` the folder with functions DATA LAYER functions
+- `model` the folder with data models
+Also could be found
+- `DaoQuestionTest.java` file with testing unit
+- `QuizApp.java` main java
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Also, project contain database written on SQLite and sql script.
