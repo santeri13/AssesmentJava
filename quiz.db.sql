@@ -1,0 +1,23 @@
+BEGIN TRANSACTION;
+CREATE TABLE IF NOT EXISTS "Topics" (
+	"id"	INTEGER,
+	"name"	TEXT NOT NULL,
+	PRIMARY KEY("id" AUTOINCREMENT)
+);
+CREATE TABLE IF NOT EXISTS "Questions" (
+	"id"	INTEGER,
+	"topic_id"	INTEGER NOT NULL,
+	"difficulty"	INTEGER NOT NULL,
+	"content"	TEXT NOT NULL,
+	FOREIGN KEY("topic_id") REFERENCES "Topics"("id"),
+	PRIMARY KEY("id" AUTOINCREMENT)
+);
+CREATE TABLE IF NOT EXISTS "Responses" (
+	"id"	INTEGER,
+	"question_id"	INTEGER NOT NULL,
+	"text"	TEXT NOT NULL,
+	"is_correct"	BOOLEAN NOT NULL,
+	FOREIGN KEY("question_id") REFERENCES "Questions"("id"),
+	PRIMARY KEY("id" AUTOINCREMENT)
+);
+COMMIT;
